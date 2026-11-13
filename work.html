@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>أعمالنا | Samy Kasseb Design & Print</title>
+<meta name="description" content="معرض أعمال Samy Kasseb Design & Print – سامي كاسب للتصميم والطباعة: صور من تنفيذنا في الطباعة والأجنحة واليفط والعلامات الإرشادية.">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800;900&family=Montserrat:wght@500;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--b:#14489F;--deep:#0A2A66;--night:#06193D;--sky:#5C93F0;--pale:#EAF0FB;--ink:#12203D}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Cairo',Tahoma,sans-serif;background:var(--night);color:#fff;line-height:1.8;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.en{font-family:inherit;direction:ltr;unicode-bidi:isolate}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+#prog{position:fixed;top:0;right:0;height:4px;width:0;background:linear-gradient(90deg,var(--sky),#fff);z-index:80}
+
+/* header */
+header{position:fixed;top:0;left:0;right:0;z-index:70;background:rgba(6,25,61,.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 8px 30px rgba(0,0,0,.25)}
+.nb{display:flex;align-items:center;justify-content:space-between;gap:16px;height:70px}
+.nb .lg img{height:42px;width:auto;display:block;filter:brightness(0) invert(1)}
+nav{display:flex;gap:4px;font-weight:700;font-size:.9rem}
+nav a{text-align:center;line-height:1.35;padding:7px 12px;border-radius:12px;transition:background .3s}
+nav small{display:block;font-size:1em;font-weight:700;opacity:.7}
+nav a:hover{background:rgba(255,255,255,.1)}
+nav a.on{color:#cfe0ff;box-shadow:inset 0 -3px 0 var(--sky)}
+.cta{background:#fff;color:var(--b);font-weight:800;padding:9px 22px;border-radius:50px;font-size:.92rem;white-space:nowrap;transition:background .3s,color .3s,transform .3s}
+.cta:hover{background:var(--sky);color:#fff;transform:translateY(-2px)}
+@media(max-width:700px){nav a.hm{display:none}.cta{padding:7px 16px;font-size:.85rem}.nb .lg img{height:36px}}
+
+/* hero */
+.ph{position:relative;min-height:78vh;display:flex;align-items:flex-end;padding:130px 0 54px;overflow:hidden;background:#040C24}
+.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.5;animation:drift 16s ease-in-out infinite alternate}
+.b1{width:520px;height:520px;background:#0E3A9A;top:-160px;left:-120px}
+.b2{width:440px;height:440px;background:#1B56C9;bottom:-200px;right:8%;animation-duration:21s;opacity:.38}
+@keyframes drift{to{transform:translate(90px,60px) scale(1.25)}}
+.beam{position:absolute;top:-20%;bottom:-20%;width:120px;background:linear-gradient(90deg,transparent,rgba(120,170,255,.12),transparent);transform:rotate(18deg);animation:sweep 10s linear infinite}
+@keyframes sweep{from{right:-20%}to{right:120%}}
+.ghost{position:absolute;left:-2%;top:50%;margin-top:-.55em;font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(11rem,34vw,26rem);line-height:1;color:transparent;-webkit-text-stroke:2px rgba(120,170,255,.25);direction:ltr;user-select:none;pointer-events:none;will-change:transform}
+.ph .wrap{position:relative;z-index:2;width:100%}
+.crumb{display:flex;flex-wrap:wrap;gap:8px;font-weight:700;font-size:.92rem;color:#9db8ee;margin-bottom:20px}
+.crumb a:hover{color:#fff}
+.crumb b{opacity:.5;font-weight:400}
+.ph h1,.ph .sub{font-size:clamp(1.7rem,4.4vw,3rem);font-weight:900;line-height:1.35;max-width:20em;opacity:0;transform:translateY(40px);animation:up 1s cubic-bezier(.2,.9,.2,1) forwards}
+.ph h1{animation-delay:.15s}
+.ph .sub{color:#9CC2FF;margin-top:6px;animation-delay:.3s;display:block}
+@keyframes up{to{opacity:1;transform:none}}
+.bar{width:90px;height:5px;background:var(--sky);border-radius:5px;margin:24px 0 22px;transform-origin:right;transform:scaleX(0);animation:grow 1s .6s forwards}
+@keyframes grow{to{transform:none}}
+.meta{display:flex;flex-wrap:wrap;gap:12px;align-items:center;opacity:0;animation:up 1s .7s forwards}
+.pill{border:1.5px solid rgba(255,255,255,.35);border-radius:50px;padding:6px 18px;font-weight:700;background:rgba(255,255,255,.06)}
+.chips{display:flex;gap:10px;margin-top:30px;overflow-x:auto;padding:4px 2px 10px;scroll-snap-type:x proximity;opacity:0;animation:up 1s .9s forwards}
+.chips::-webkit-scrollbar{height:0}
+.chip{flex:none;scroll-snap-align:start;width:48px;height:48px;border-radius:50%;display:grid;place-items:center;font-family:'Montserrat',sans-serif;font-weight:800;border:1.5px solid rgba(255,255,255,.35);transition:background .3s,color .3s,transform .3s,border-color .3s;direction:ltr}
+.chip:hover{transform:translateY(-4px);border-color:#fff}
+.chip.on{background:#fff;color:var(--b);border-color:#fff}
+
+/* gallery */
+.gal{background:var(--b);padding:70px 0 90px;position:relative}
+.mas{display:flex;gap:16px;align-items:flex-start}
+.col{flex:1;min-width:0;display:flex;flex-direction:column;gap:16px}
+.it{position:relative;display:block;border-radius:20px;overflow:hidden;background:#0b2452;cursor:zoom-in;opacity:0;transform:translateY(50px) scale(.96);transition:opacity .8s,transform .8s cubic-bezier(.2,.9,.2,1),box-shadow .4s;transition-delay:var(--d,0s);box-shadow:0 12px 34px rgba(0,0,0,.25)}
+.it.in{opacity:1;transform:none}
+.it.in:hover{transform:translateY(-6px);box-shadow:0 26px 56px rgba(0,0,0,.45);transition-delay:0s}
+.it img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s cubic-bezier(.2,.9,.2,1)}
+.it:hover img{transform:scale(1.08)}
+.it::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(4,12,36,.8));opacity:0;transition:opacity .4s}
+.it:hover::after{opacity:1}
+.it .no{position:absolute;z-index:2;right:16px;bottom:12px;font-weight:800;opacity:0;transform:translateY(12px);transition:.4s;letter-spacing:1px}
+.it .zm{position:absolute;z-index:2;left:14px;bottom:12px;width:40px;height:40px;border-radius:50%;background:#fff;color:var(--b);display:grid;place-items:center;font-size:1.2rem;font-weight:900;opacity:0;transform:scale(.5);transition:.4s}
+.it:hover .no,.it:hover .zm{opacity:1;transform:none}
+.sk{border-radius:20px;background:linear-gradient(90deg,rgba(255,255,255,.06),rgba(255,255,255,.15),rgba(255,255,255,.06));background-size:200% 100%;animation:shim 1.4s linear infinite}
+@keyframes shim{to{background-position:-200% 0}}
+.empty{text-align:center;padding:60px 0;color:#cfe0ff;font-weight:700}
+
+/* next / prev */
+.nxt{background:var(--night);padding:80px 0 70px}
+.nxt h2{font-size:clamp(1.5rem,3.4vw,2.2rem);font-weight:900;margin-bottom:26px}
+.nx2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.nx{position:relative;overflow:hidden;border:1.5px solid rgba(255,255,255,.25);border-radius:24px;padding:28px 30px;display:flex;flex-direction:column;gap:2px;transition:transform .4s,border-color .4s}
+.nx::before{content:"";position:absolute;inset:auto 0 0 0;height:0;background:var(--b);transition:height .45s cubic-bezier(.2,.9,.2,1);z-index:0}
+.nx:hover::before{height:100%}
+.nx:hover{transform:translateY(-6px);border-color:var(--sky)}
+.nx>*{position:relative;z-index:1}
+.nx small{color:var(--sky);font-weight:800;font-size:.95rem}
+.nx b,.nx .en{font-size:1.15rem;font-weight:800;line-height:1.6}
+.nx .en{opacity:.8}
+.nx i{position:absolute!important;top:22px;left:26px;font-style:normal;font-size:1.8rem;font-weight:900;transition:transform .3s}
+.nx.n:hover i{transform:translateX(-8px)}
+.nx.p:hover i{transform:translateX(8px)}
+.nx.p i{left:auto;right:auto;inset-inline-end:26px;inset-inline-start:auto;top:22px}
+.back{display:flex;justify-content:center;margin-top:36px}
+.back a{border:1.5px solid rgba(255,255,255,.5);border-radius:50px;padding:10px 28px;font-weight:800;transition:background .3s,color .3s}
+.back a:hover{background:#fff;color:var(--b)}
+@media(max-width:700px){.nx2{grid-template-columns:1fr}.mas{gap:10px}.col{gap:10px}.it{border-radius:14px}}
+footer{background:#030f26;color:#9fb4dd;text-align:center;padding:20px;font-size:.88rem}
+
+/* lightbox */
+#lb{position:fixed;inset:0;z-index:100;background:rgba(3,10,28,.96);display:none;flex-direction:column;align-items:center;justify-content:center;padding:70px 20px 120px}
+#lb.on{display:flex;animation:fadein .3s}
+@keyframes fadein{from{opacity:0}}
+#lbi{max-width:min(94vw,1200px);max-height:100%;object-fit:contain;border-radius:14px;box-shadow:0 30px 80px rgba(0,0,0,.6);transition:opacity .25s,transform .25s}
+#lbi.sw{opacity:0;transform:scale(.97)}
+#lb button{position:absolute;border:0;background:rgba(255,255,255,.14);color:#fff;width:50px;height:50px;border-radius:50%;font-size:1.6rem;cursor:pointer;transition:background .3s,transform .3s}
+#lb button:hover{background:var(--b);transform:scale(1.08)}
+#lbx{top:18px;left:18px}#lbp{right:18px;top:50%;margin-top:-25px}#lbn{left:18px;top:50%;margin-top:-25px}
+#lbc{position:absolute;top:26px;right:0;left:0;text-align:center;color:#cfe0ff;font-weight:800;direction:ltr;pointer-events:none}
+#lbt{position:absolute;bottom:18px;left:0;right:0;display:flex;gap:8px;justify-content:center;padding:0 16px;overflow-x:auto;direction:ltr}
+#lbt::-webkit-scrollbar{height:0}
+#lbt img{flex:none;width:68px;height:52px;object-fit:cover;border-radius:10px;opacity:.5;cursor:pointer;border:2px solid transparent;transition:.3s}
+#lbt img:hover{opacity:.85}
+#lbt img.on{opacity:1;border-color:#fff}
+@media(max-width:700px){#lbp,#lbn{display:none}#lbt img{width:54px;height:42px}}
+
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01s!important;animation-delay:0s!important;transition-duration:.01s!important}.it{opacity:1;transform:none}}
+.dev{margin-top:10px;padding-top:10px;border-top:1px solid rgba(255,255,255,.12);font-size:.88rem;color:#9fb4dd;direction:ltr}
+.dev a{color:#fff;font-weight:800;border-bottom:1px solid var(--sky,#5C93F0);transition:color .3s}
+.dev a:hover{color:var(--sky,#5C93F0)}
+</style>
+</head>
+<body>
+<div id="prog"></div>
+
+<header><div class="wrap nb">
+  <a class="lg" id="homeLogo" href="#"><img src="images/logo.png" alt="Samy Kasseb Design & Print"></a>
+  <nav>
+    <a class="hm" id="navHome" href="#">الرئيسية<small class="en">Home</small></a>
+    <a class="on" id="navWork" href="#">أعمالنا<small class="en">Work</small></a>
+  </nav>
+  <a class="cta" id="navContact" href="#">تواصل معنا</a>
+</div></header>
+
+<section class="ph">
+  <i class="blob b1"></i><i class="blob b2"></i><i class="beam" style="right:25%"></i><i class="beam" style="right:65%;width:70px;animation-delay:-5s"></i>
+  <div class="ghost" id="ghost">1</div>
+  <div class="wrap">
+    <div class="crumb"><a id="crHome" href="#">الرئيسية</a><b>/</b><a id="crWork" href="#">أعمالنا</a><b>/</b><span id="crNo" class="en">1</span></div>
+    <h1 id="tAr"></h1>
+    <span class="sub en" id="tEn"></span>
+    <div class="bar"></div>
+    <div class="meta"><span class="pill" id="cnt">...</span><span class="pill en">Samy Kasseb · Design &amp; Print</span></div>
+    <div class="chips" id="chips"></div>
+  </div>
+</section>
+
+<section class="gal"><div class="wrap">
+  <div class="mas" id="mas"></div>
+</div></section>
+
+<section class="nxt"><div class="wrap">
+  <h2>اكتشف باقي تخصصاتنا <span class="en">/ Explore more</span></h2>
+  <div class="nx2">
+    <a class="nx p" id="prev" href="#"><i>→</i><small>التخصص السابق <span class="en">/ Previous</span></small><b id="pAr"></b><span class="en" id="pEn"></span></a>
+    <a class="nx n" id="next" href="#"><i>←</i><small>التخصص التالي <span class="en">/ Next</span></small><b id="nAr"></b><span class="en" id="nEn"></span></a>
+  </div>
+  <div class="back"><a id="backAll" href="#">كل أعمالنا <span class="en">/ All Work</span></a></div>
+</div></section>
+
+<footer class="en">© <span id="y"></span> Samy Kasseb Design &amp; Print · www.samykasseb.com<div class="dev">Want a website like this? Contact us on <a href="https://wa.me/201126493683" target="_blank" rel="noopener">01126493683</a></div></footer>
+
+<div id="lb">
+  <button id="lbx" aria-label="إغلاق">✕</button>
+  <button id="lbp" aria-label="السابق">›</button>
+  <button id="lbn" aria-label="التالي">‹</button>
+  <div id="lbc"></div>
+  <img id="lbi" alt="">
+  <div id="lbt"></div>
+</div>
+
+<script>
+const qs=new URLSearchParams(location.search);
+/* اسم الملف الرئيسي بيتبعت تلقائيًا من الصفحة الرئيسية */
+const HOME=qs.get('h')||'index.html';
+const HQ='&h='+encodeURIComponent(HOME);
+
+const W=[["طباعة الكابات والتي شيرت والأعلام بالسلك سكرين","Printing caps, T-shirts and flags using silk screen"],["أجنحة وتجهيزات معارض ومؤتمرات","Pavilions and equipment for exhibitions and conferences"],["يفط استانلس ونحاس وخشب وفلكس فيس","Welding stainless steel, copper, wood and flex face"],["العلامات الإرشادية والتحذيرية","Indicative and warning signs"],["تجهيز وتصميم وطباعة المطبوعات الخاصة بالشركات والفنادق","Preparing, designing and printing publications for companies and hotels"],["دروع وشهادات / نيم تاج حفر ليزر / طباعة ID / بطاقات تعارف","Shields, certificates, name tags, ID printing, introduction cards"]];
+const $=i=>document.getElementById(i);
+const q=new URLSearchParams(location.search);
+let c=parseInt(q.get('c'),10);if(!(c>=1&&c<=W.length))c=1;
+const startIdx=parseInt(q.get('i'),10);
+const pad=n=>String(n).padStart(2,'0');
+const w=W[c-1];
+
+/* links + texts */
+['homeLogo','navHome','crHome'].forEach(i=>$(i).href=HOME);
+['navWork','crWork','backAll'].forEach(i=>$(i).href=HOME+'#work');
+$('navContact').href=HOME+'#contact';
+document.title=w[0]+' | Samy Kasseb Design & Print';
+$('tAr').textContent=w[0];$('tEn').textContent=w[1];
+$('ghost').textContent=c;$('crNo').textContent=c;
+$('y').textContent=new Date().getFullYear();
+$('chips').innerHTML=W.map((x,i)=>`<a class="chip${i+1===c?' on':''}" href="work.html?c=${i+1}${HQ}" title="${x[0].replace(/"/g,'&quot;')}">${i+1}</a>`).join('');
+const pi=(c-2+W.length)%W.length,ni=c%W.length;
+$('prev').href='work.html?c='+(pi+1)+HQ;$('next').href='work.html?c='+(ni+1)+HQ;
+$('pAr').textContent=W[pi][0];$('pEn').textContent=W[pi][1];
+$('nAr').textContent=W[ni][0];$('nEn').textContent=W[ni][1];
+
+/* find images: images/work/<c>/01.jpeg, 02.jpeg ... */
+const EXTS=['jpeg','jpg','png','webp','JPG','JPEG','PNG'];
+const probe=u=>new Promise(r=>{const i=new Image();i.onload=()=>r({src:u,w:i.naturalWidth||4,h:i.naturalHeight||3});i.onerror=()=>r(null);i.src=u});
+async function findImages(){
+  const out=[];let miss=0,pref=0;
+  for(let n=1;n<=60&&miss<2;n++){
+    let f=null;
+    for(let k=0;k<EXTS.length&&!f;k++){
+      const e=EXTS[(pref+k)%EXTS.length];
+      f=await probe(`images/work/${c}/${pad(n)}.${e}`);
+      if(f)pref=(pref+k)%EXTS.length;
+    }
+    if(f){out.push(f);miss=0}else miss++;
+  }
+  return out;
+}
+
+/* masonry (keeps reading order, balances heights) */
+const mas=$('mas');let items=[],lastCols=0,firstLayout=true;
+const colCount=()=>{const x=mas.clientWidth;return x>=900?3:x>=560?2:1};
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
+function layout(){
+  const n=colCount();lastCols=n;mas.innerHTML='';
+  const cs=[...Array(n)].map(()=>{const d=document.createElement('div');d.className='col';mas.appendChild(d);return{el:d,h:0}});
+  const total=items.length;
+  items.forEach((it,k)=>{
+    const col=cs.reduce((a,b)=>b.h<a.h?b:a);
+    col.h+=it.h/it.w;
+    const a=document.createElement('a');
+    a.className='it';a.href=it.src;a.dataset.k=k;
+    a.style.aspectRatio=it.w+'/'+it.h;
+    a.style.setProperty('--d',((k%6)*.07)+'s');
+    a.innerHTML=`<img src="${it.src}" alt="${w[0].replace(/"/g,'&quot;')}" draggable="false"><span class="no en">${pad(k+1)} / ${pad(total)}</span><span class="zm">⤢</span>`;
+    col.el.appendChild(a);
+    if(firstLayout)io.observe(a);else a.classList.add('in');
+  });
+  firstLayout=false;
+}
+addEventListener('resize',()=>{if(items.length&&colCount()!==lastCols)layout()});
+
+/* lightbox */
+const lb=$('lb'),lbi=$('lbi');let cur=0;
+function showImg(k,animate){
+  cur=(k+items.length)%items.length;
+  const go=()=>{lbi.src=items[cur].src;lbi.classList.remove('sw')};
+  $('lbc').textContent=pad(cur+1)+' / '+pad(items.length);
+  [...$('lbt').children].forEach((t,i)=>{t.classList.toggle('on',i===cur);if(i===cur)t.scrollIntoView({inline:'center',block:'nearest',behavior:'smooth'})});
+  if(animate){lbi.classList.add('sw');setTimeout(go,180)}else go();
+  [1,-1].forEach(d=>{const p=new Image();p.src=items[(cur+d+items.length)%items.length].src});
+}
+function openLb(k){
+  $('lbt').innerHTML=items.length>1?items.map((it,i)=>`<img src="${it.src}" data-t="${i}" alt="">`).join(''):'';
+  lb.classList.add('on');document.body.style.overflow='hidden';showImg(k,false);
+  $('lbp').style.display=$('lbn').style.display=items.length>1?'':'none';
+}
+const closeLb=()=>{lb.classList.remove('on');document.body.style.overflow=''};
+mas.addEventListener('click',e=>{const a=e.target.closest('.it');if(!a)return;e.preventDefault();openLb(+a.dataset.k)});
+$('lbx').onclick=closeLb;
+$('lbn').onclick=()=>showImg(cur-1,true);   /* RTL: left = next */
+$('lbp').onclick=()=>showImg(cur+1,true);
+$('lbt').addEventListener('click',e=>{const t=e.target.closest('img');if(t)showImg(+t.dataset.t,true)});
+lb.addEventListener('click',e=>{if(e.target===lb)closeLb()});
+addEventListener('keydown',e=>{
+  if(!lb.classList.contains('on'))return;
+  if(e.key==='Escape')closeLb();
+  if(e.key==='ArrowLeft')showImg(cur+1,true);
+  if(e.key==='ArrowRight')showImg(cur-1,true);
+});
+let sx=null;
+lb.addEventListener('touchstart',e=>{sx=e.touches[0].clientX},{passive:true});
+lb.addEventListener('touchend',e=>{if(sx===null)return;const dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>50)showImg(cur+(dx<0?1:-1),true);sx=null});
+
+/* load */
+mas.innerHTML='<div class="col"><div class="sk" style="height:260px"></div><div class="sk" style="height:200px"></div></div><div class="col"><div class="sk" style="height:200px"></div><div class="sk" style="height:280px"></div></div><div class="col"><div class="sk" style="height:300px"></div><div class="sk" style="height:180px"></div></div>';
+findImages().then(list=>{
+  items=list;
+  const n=list.length;
+  $('cnt').innerHTML=n?`${n} ${n===1?'صورة':'صور'} <span class="en">· ${n} Photo${n===1?'':'s'}</span>`:'قريبًا <span class="en">· Coming soon</span>';
+  if(!n){mas.innerHTML='<p class="empty" style="width:100%">الصور قريبًا · Photos coming soon</p>';return}
+  layout();
+  if(startIdx>=0&&startIdx<n)setTimeout(()=>openLb(startIdx),350);
+});
+
+/* ghost parallax + progress */
+addEventListener('scroll',()=>{
+  const h=document.documentElement;
+  $('prog').style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';
+  $('ghost').style.transform=`translateY(${Math.min(scrollY,700)*.25}px)`;
+},{passive:true});
+</script>
+</body>
+</html>
